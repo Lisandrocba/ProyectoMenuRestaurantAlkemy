@@ -12,8 +12,6 @@ const CartItem =({item})=>{
                 <Link to={`/item/${item.id}`} key= {item.id}>
                     <Button variant="primary">Ver Descripcion</Button>
                 </Link>
-                 
-                
             </Card.Body>
         </Card> 
     )

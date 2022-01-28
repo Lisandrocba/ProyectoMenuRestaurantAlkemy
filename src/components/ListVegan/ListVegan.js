@@ -8,7 +8,7 @@ import CartItem from '../CartItem/CartItem'
 const ListVegan =()=>{
     const [prodVegan, setProdVegan] = useState([]);
 
-    const url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=3b10244193b64a14934f99426534aa19&query=vegan';
+    const url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=fdf9e3938a624d21a5a37848d2110d70&query=vegan';
 
     
     
