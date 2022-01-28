@@ -62,7 +62,6 @@ const CartOrden =()=>{
                         <ListGroup variant="flush">
                             <ListGroup.Item>Precio Total: {totalPrecio}</ListGroup.Item>
                             <ListGroup.Item>Tiempo estimado de espera: {timpoEspera} minutos</ListGroup.Item>
-                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                         </ListGroup>
                         </Card> 
                     </Row>
