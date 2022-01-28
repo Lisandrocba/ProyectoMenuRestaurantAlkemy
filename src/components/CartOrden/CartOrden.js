@@ -44,6 +44,7 @@ const CartOrden =()=>{
                     <Row className='m-3'>
                         {pedidoNoVegano.map((i=>{
                             sumarTotal(i.item)
+                            calculoEspera(i.item)
                             return(
                                 <Card className='m-3' style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={i.item.image} />
