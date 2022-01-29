@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../CartContex/CartContext";
 import NavBar from '../NavBar/NavBar';
-import Container from 'react-bootstrap/Container';
 import Orden from "../Orden/Orden";
 
 const Home =()=>{
 
+    const {checkLogin } = useContext(CartContext);
+
     return(
         <>
+            {checkLogin()}
             <NavBar />
             <Orden />
         </>
-
-        
     );
 }
 

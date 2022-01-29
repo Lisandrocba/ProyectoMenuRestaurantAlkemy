@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export const CartContext = createContext([]);
 
@@ -7,7 +8,16 @@ export const CartProvider =({children})=>{
     const [pedidoVegano, setPedidoVegano] = useState([]);
     const [pedidoNoVegano, setPedidoNoVegano] = useState([]);
     
-    
+    const token = localStorage.getItem('token');
+    const navigate = useNavigate();
+
+    const checkLogin =()=>{
+        if (!token){
+            return(
+                navigate('/')
+                )
+        }
+    }
     
 
     const addItem =(item)=>{
@@ -33,7 +43,7 @@ export const CartProvider =({children})=>{
 
     }
     
-    const datos = { pedidoVegano, pedidoNoVegano , addItem, removeItem, limpiarOrden}
+    const datos = { pedidoVegano, pedidoNoVegano ,checkLogin, addItem, removeItem, limpiarOrden}
 
     return(
         <CartContext.Provider value={datos}>

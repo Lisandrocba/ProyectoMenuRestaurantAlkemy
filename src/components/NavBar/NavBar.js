@@ -9,6 +9,12 @@ const NavBar =()=>{
 
     const navigate = useNavigate();
     
+    
+    const logout =()=>{
+        navigate('/')
+        localStorage.removeItem('token')
+    }
+
     return(
         <Navbar 
          bg="dark" variant="dark">
@@ -17,7 +23,7 @@ const NavBar =()=>{
                 <Nav>
                     <Nav.Link  onClick={()=>{navigate('/vegan');}}>Comidas Veganas</Nav.Link>
                     <Nav.Link  onClick={()=>{navigate('/Meat');}}>Comidas no Veganas</Nav.Link>
-                    <Nav.Link href="#pricing">LogOut</Nav.Link>
+                    <Nav.Link onClick={()=> logout()}>LogOut</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

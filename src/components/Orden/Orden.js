@@ -4,10 +4,11 @@ import Container from 'react-bootstrap/Container';
 import CartOrden from '../CartOrden/CartOrden';
 
 const Orden =()=>{
-    const {pedidoVegano, pedidoNoVegano } = useContext(CartContext);
+    const {pedidoVegano, pedidoNoVegano, checkLogin } = useContext(CartContext);
 
     return(
         <Container>
+            {checkLogin}
             <h1>Ordenes:</h1>
             
             {

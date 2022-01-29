@@ -9,7 +9,7 @@ const ItemDetail =(item)=>{
 
     const [detalle, setDetalle] = useState([]);
     const {id} = useParams();
-    const {pedido, addItem, removeItem, limpiarOrden} = useContext(CartContext);
+    const {pedido, addItem, removeItem, limpiarOrden, checkLogin} = useContext(CartContext);
 
     const navigate = useNavigate();
 
@@ -28,6 +28,7 @@ const ItemDetail =(item)=>{
 
     return(
         <>
+        {checkLogin()}
         <NavBar />
         <Card className='mt-5' style={{ width: '45rem', margin: 'auto auto' }}>
             <Card.Img variant="top" style={{ width: '20rem', margin: 'auto auto', padding: 10 }} src={detalle.image} />
