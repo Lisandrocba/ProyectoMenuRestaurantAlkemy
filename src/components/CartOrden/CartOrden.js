@@ -60,7 +60,7 @@ const CartOrden =()=>{
                     <Row className='m-3'>
                         <Card style={{ width: '18rem' }}>
                         <ListGroup variant="flush">
-                            <ListGroup.Item>Precio Total: {totalPrecio}</ListGroup.Item>
+                            <ListGroup.Item>Precio Total: {totalPrecio.toFixed(2)}</ListGroup.Item>
                             <ListGroup.Item>Tiempo estimado de espera: {timpoEspera} minutos</ListGroup.Item>
                         </ListGroup>
                         </Card> 
